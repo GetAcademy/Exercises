@@ -9,18 +9,16 @@ var clickers = new Clicker[]
     new Clicker {_letter = 'c'},
 };
 
+var inputKey = ' ';
 while (true)
 {
     Console.Clear();
     foreach (var clicker in clickers)
     {
+        clicker.Count(inputKey);
         clicker.Show();
     }
-    var inputKey = Console.ReadKey(true);
-    foreach (var clicker in clickers)
-    {
-        clicker.Count(inputKey.KeyChar);
-    }
+    inputKey = Console.ReadKey(true).KeyChar;
 }
 
 /*
