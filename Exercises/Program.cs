@@ -1,0 +1,3 @@
+﻿using Exercises;
+
+NumberPuzzle.Run();
